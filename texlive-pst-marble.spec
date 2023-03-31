@@ -1,6 +1,6 @@
 Name:		texlive-pst-marble
 Version:	50925
-Release:	1
+Release:	2
 Summary:	A PSTricks package to draw marble-like patterns
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/pst-marble
