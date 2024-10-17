@@ -3,7 +3,7 @@ Version:	50925
 Release:	2
 Summary:	A PSTricks package to draw marble-like patterns
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/pst-marble
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/pst-marble
 License:	lppl1.3c
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-marble.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-marble.doc.r%{version}.tar.xz
