@@ -1,37 +1,20 @@
-Name:		texlive-pst-marble
-Version:	50925
-Release:	2
+%global tl_name pst-marble
+%global tl_revision 79618
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	1.6
+Release:	%{tl_revision}.1
 Summary:	A PSTricks package to draw marble-like patterns
 Group:		Publishing
-URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/pst-marble
+URL:		https://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-marble
 License:	lppl1.3c
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-marble.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-marble.doc.r%{version}.tar.xz
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-marble.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-marble.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
 This is a PSTricks package to draw marble-like patterns.
 
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-rm -rf tlpkg
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -a * %{buildroot}%{_texmfdistdir}
-
-%files
-%{_texmfdistdir}/tex/latex/pst-marble
-%{_texmfdistdir}/tex/generic/pst-marble
-%{_texmfdistdir}/dvips/pst-marble
-%doc %{_texmfdistdir}/doc/generic/pst-marble
-
-%post -p %{_sbindir}/texlive.post
-
-%postun
-[ "$1" -eq 0 ] && %{_sbindir}/texlive.post
